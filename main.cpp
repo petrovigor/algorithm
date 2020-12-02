@@ -27,6 +27,16 @@ void test_binarySearch() {
   assert(!binarySearch(arr5, 11));
   assert(!binarySearch(arr5, 15));
   assert(!binarySearch(arr5, 17));
+
+  std::vector<std::vector<int>> arr6 { { 10, 12, 14, 16 },
+                                       { 17, 20, 22, 24 } };
+
+  assert(matrixBinarySearch(arr6, 12));
+  assert(matrixBinarySearch(arr6, 17));
+  assert(matrixBinarySearch(arr6, 20));
+  assert(!matrixBinarySearch(arr6, 21));
+  assert(!matrixBinarySearch(arr6, 25));
+
 }
 
 void test_reversePolishNotation() {

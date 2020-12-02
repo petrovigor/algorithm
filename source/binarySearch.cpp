@@ -1,4 +1,4 @@
-#include "binarySearch.h"
+#include "../include/binarySearch.h"
 
 #if _DEBUG
 #include <iostream>

@@ -21,7 +21,7 @@ bool binarySearch(const std::vector<int>& arr, const size_t from, const size_t t
   const size_t mid = from + (n / 2);
 
 #if _DEBUG
-  std::cout << "mid = " << mid << std::endl;
+  std::cout << "mid = " << mid << " n = " << n << std::endl;
 #endif //_DEBUG
 
   if(target == arr[mid]) {
@@ -30,6 +30,9 @@ bool binarySearch(const std::vector<int>& arr, const size_t from, const size_t t
 #endif //_DEBUG
     return true;
   }
+
+  if(n == 0)
+    return false;
 
   if(target > arr[mid]) {
     return binarySearch(arr, mid + 1, to, target);

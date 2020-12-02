@@ -20,6 +20,9 @@ void test_binarySearch() {
 
   std::vector<int> arr4 { };
   assert(!binarySearch(arr4, 1));
+
+  std::vector<int> arr5 { 10, 12, 14, 16 };
+  assert(!binarySearch(arr5, 13));
 }
 
 void test_reversePolishNotation() {

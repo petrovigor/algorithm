@@ -60,6 +60,8 @@ std::size_t matrixBinarySearch(const std::vector<std::vector<int>>& mat, const s
   const size_t mid = from + (n / 2);
 
   const std::vector<int>& arr = mat[mid];
+  if(arr.empty())
+    return not_found;
 
   if(target >= arr.front() && target <= arr.back()) {
     std::cout << "index: " << mid << std::endl;

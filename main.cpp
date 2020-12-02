@@ -1,5 +1,5 @@
-#include "reversePolishNotation.h"
-#include "binarySearch.h"
+#include "include/reversePolishNotation.h"
+#include "include/binarySearch.h"
 
 #include <cassert> //debug only
 

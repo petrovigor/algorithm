@@ -1,4 +1,5 @@
-#include <string>
+#include "../include/reversePolishNotation.h"
+
 #include <stack>
 #include <cctype>
 

@@ -2,14 +2,10 @@
 #include <stack>
 #include <cctype>
 
-#include <cassert> //tests only
-
 #if _DEBUG
 #include <iostream>
 #endif //_DEBUG
 
-//returns reverse polish notation of source string
-//doesn't process unary operators
 std::string ReversePolishNotation(const std::string& src) {
   std::string dst;
   std::stack<char> q;
@@ -98,14 +94,4 @@ std::string ReversePolishNotation(const std::string& src) {
 #endif //_DEBUG
 
   return dst;
-}
-
-int main() {
-  assert(ReversePolishNotation("") == "");
-  assert(ReversePolishNotation("2+3*5+9") == "2 3 5 *+9 +");
-  assert(ReversePolishNotation("2*9+9+9/8/7/6/5*1*3") == "2 9 *9 +9 8 /7 /6 /5 /1 *3 *+");
-  assert(ReversePolishNotation("1+2+3+4+5") == "1 2 +3 +4 +5 +");
-  assert(ReversePolishNotation("1+2-3+4-5") == "1 2 +3 -4 +5 -");
-
-  return 0;
 }

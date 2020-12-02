@@ -1,10 +1,8 @@
-#include <vector>
+#include "binarySearch.h"
 
 #if _DEBUG
 #include <iostream>
 #endif //_DEBUG
-
-#include <cassert> //debug only
 
 bool binarySearch(const std::vector<int>& arr, const size_t from, const size_t to, const int target) {
 #if _DEBUG
@@ -47,25 +45,4 @@ bool binarySearch(const std::vector<int>& arr, const int target) {
     return false;
 
   return binarySearch(arr, 0, arr.size() - 1, target);
-}
-
-int main() {
-  std::vector<int> arr1 { 10, 11, 16, 20 };
-  assert(binarySearch(arr1, 10));
-  assert(binarySearch(arr1, 11));
-  assert(binarySearch(arr1, 16));
-  assert(binarySearch(arr1, 20));
-
-  std::vector<int> arr2 { 10 };
-  assert(binarySearch(arr2, 10));
-
-  std::vector<int> arr3 { 1, 2, 3 };
-  assert(binarySearch(arr3, 1));
-  assert(binarySearch(arr3, 2));
-  assert(binarySearch(arr3, 3));
-
-  std::vector<int> arr4 { };
-  assert(!binarySearch(arr4, 1));
-
-  return 0;
 }
